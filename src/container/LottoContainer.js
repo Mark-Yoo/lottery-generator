@@ -1,9 +1,13 @@
 import React, { useState, useRef } from "react";
 import LottoCell from "../components/LottoCell";
+import LottoButton from "../components/LottoButton";
+import LottoResult from "../components/LottoResult";
 
 const LottoContainer = () => {
   const [lotto, setLotto] = useState([0, 0, 0, 0, 0, 0, 0]);
+  const [resultList, setResultList] = useState([]);
   const lottoNum = lotto;
+  const result = resultList;
   const makeLotto = () => {
     let lottoArray = [];
     let count = 0;
@@ -17,15 +21,18 @@ const LottoContainer = () => {
       }
     }
     setLotto(lottoArray);
+    setResultList([...result, lottoArray]);
   };
 
   return (
     <>
       <div className="container">
         <br />
-        <button onClick={makeLotto}>로또 번호 생성기</button>
-        <br />
         <LottoCell lotto={lottoNum} />
+        <br />
+        <LottoButton lottoEvent={makeLotto} />
+        <br />
+        <LottoResult lottoresult={resultList} />
       </div>
     </>
   );

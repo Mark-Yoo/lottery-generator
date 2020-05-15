@@ -6,11 +6,28 @@ const LottoCell = (props) => {
   return (
     <>
       {props.lotto.map((num, i) => {
-        return (
+        return i < 6 ? (
           <>
             <div
-              key={i}
-              className={classNames({ lottocell: true, lottonum: true })}
+              key={i.toString()}
+              className={classNames({
+                lottocell: true,
+                lottonum: true,
+                lottobasic: true,
+              })}
+            >
+              <p>{num}</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div
+              key={"lottoCell-" + i.toString()}
+              className={classNames({
+                lottocell: true,
+                lottonum: true,
+                lottobonus: true,
+              })}
             >
               <p>{num}</p>
             </div>

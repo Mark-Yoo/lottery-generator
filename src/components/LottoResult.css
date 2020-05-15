@@ -1,0 +1,20 @@
+.resultList {
+  float: left;
+  list-style: none;
+}
+.result {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: pink;
+
+}
+
+.resultCell {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: pink;
+  text-align: center;
+  margin-top: 25%;
+}
