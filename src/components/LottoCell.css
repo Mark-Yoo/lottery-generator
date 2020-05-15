@@ -1,0 +1,14 @@
+.lottocell {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  display: inline-block;
+  margin: 20% 5px;
+  border-radius: 50%;
+  font-size: 45px;
+  text-align: center;
+}
+
+.lottocell p {
+  margin-top: 23%;
+}
